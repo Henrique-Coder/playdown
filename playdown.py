@@ -1,13 +1,13 @@
 from pytube import YouTube, Playlist
 from os import system as cmd, name as os_name
 from sys import exit
-from tkinter import Tk as tk, filedialog
+from tkinter import Tk, filedialog
 from termcolor import colored, cprint
 from time import sleep, time
 from tqdm import tqdm
 
 
-option_menu = {1: "Baixar playlist", 2: "Baixar música", 3: "Sair" }
+option_menu = {1: 'Baixar playlist', 2: 'Baixar música', 3: 'Sair'}
 
 # Titulo do programa
 titulo = 'PlayDown'
@@ -22,14 +22,14 @@ else:
 
 def print_options():
     print()
-    cprint('                           _____  _             _____                      ', 'magenta', attrs=['bold'])   
-    cprint('                          |  __ \| |           |  __ \                     ', 'magenta', attrs=['bold'])
-    cprint('                          | |__) | | __ _ _   _| |  | | _____      ___ __  ', 'magenta', attrs=['bold'])
-    cprint('                          |  ___/| |/ _` | | | | |  | |/ _ \ \ /\ / /  _ \ ', 'magenta', attrs=['bold'])
-    cprint('                          | |    | | (_| | |_| | |__| | (_) \ V  V /| | | |', 'magenta', attrs=['bold'])
-    cprint('                          |_|    |_|\__,_|\__, |_____/ \___/ \_/\_/ |_| |_|', 'magenta', attrs=['bold'])
-    cprint('                                           __/ | Criado por: @tago.dev     ', 'magenta', attrs=['bold'])
-    cprint('                                          |___/ gh: github.com/tago-dev    ', 'magenta', attrs=['bold'])
+    cprint("                           _____  _             _____                      ", 'magenta', attrs=['bold'])
+    cprint("                          |  __ \| |           |  __ \                     ", 'magenta', attrs=['bold'])
+    cprint("                          | |__) | | __ _ _   _| |  | | _____      ___ __  ", 'magenta', attrs=['bold'])
+    cprint("                          |  ___/| |/ _` | | | | |  | |/ _ \ \ /\ / /  _ \ ", 'magenta', attrs=['bold'])
+    cprint("                          | |    | | (_| | |_| | |__| | (_) \ V  V /| | | |", 'magenta', attrs=['bold'])
+    cprint("                          |_|    |_|\__,_|\__, |_____/ \___/ \_/\_/ |_| |_|", 'magenta', attrs=['bold'])
+    cprint("                                           __/ | Criado por: @tago.dev     ", 'magenta', attrs=['bold'])
+    cprint("                                          |___/ gh: github.com/tago-dev    ", 'magenta', attrs=['bold'])
     print()
     cprint(' ------------------------------ Bem-Vindo, escolha uma opção abaixo. ------------------------------ ', 'white', attrs=['bold'])
     print()
@@ -82,7 +82,7 @@ def download_playlist():
     acre = 0
 
     cprint('   Escolha o local para salvar a playlist', 'white', attrs=['bold'])
-    root = tk()
+    root = Tk()
     root.withdraw()
     file_path = filedialog.askdirectory()
     print()
